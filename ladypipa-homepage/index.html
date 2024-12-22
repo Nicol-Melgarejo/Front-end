@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ladypipa Homepage</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+   <!-- Barra superior -->
+   <div class="top-bar">
+    <p>FREE SHIPPING TO PERÚ ON ALL ORDERS ABOVE S/.740.00</p>
+   </div>
+    <header>     
+        <!-- Navegación principal -->
+        <nav class="navbar">
+            <!-- Logo -->
+            <div class="logo">
+                <a href="/" class="logo-text">lady pipa</a>
+            </div>
+            
+    
+            <!-- Menú principal -->
+            <ul class="menu">
+                <li class="dropdown">
+                    <a href="#">PRENDAS <i class="fas fa-angle-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Vestidos</a></li>
+                        <li><a href="#">Conjuntos</a></li>
+                        <li><a href="#">Blusas</a></li>
+                    </ul>
+                </li>
+                <li><a href="#" class="highlight">REBAJAS</a></li>
+                <li class="dropdown">
+                    <a href="#">COLECCIONES <i class="fas fa-angle-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Primavera</a></li>
+                        <li><a href="#">Verano</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">ACCESORIOS</a></li>
+                <li><a href="#">NOSOTRAS</a></li>
+                <li><a href="#">TIENDAS</a></li>
+            </ul>
+    
+            <!-- Íconos -->
+            <div class="icons">
+                <a href="#">PEN/S. <i class="fas fa-angle-down"></i></a>
+                <a href="#">EN <i class="fas fa-globe"></i></a>
+                <a href="#"><i class="fas fa-search"></i></a>
+                <a href="#"><i class="fas fa-user"></i></a>
+                <a href="#"><i class="fas fa-heart"></i></a>
+                <a href="#"><i class="fas fa-shopping-bag"></i></a>
+            </div>
+        </nav>
+    </header>
+    <section class="carousel">
+        <div class="carousel-container">
+            <!-- Slide 1 -->
+            <input type="radio" name="carousel" id="slide1" checked>
+            <div class="carousel-slide">
+                <img src="img/carrusel 1.webp" alt="Imagen 1">
+                <button class="carousel-button">Ver más</button>
+                <label for="slide3" class="prev">&#10094;</label>
+                <label for="slide2" class="next">&#10095;</label>
+            </div>
+    
+            <!-- Slide 2 -->
+            <input type="radio" name="carousel" id="slide2">
+            <div class="carousel-slide">
+                <img src="img/carrusel 2.webp" alt="Imagen 2">
+                <button class="carousel-button">Ver más</button>
+                <label for="slide1" class="prev">&#10094;</label>
+                <label for="slide3" class="next">&#10095;</label>
+            </div>
+    
+            <!-- Slide 3 -->
+            <input type="radio" name="carousel" id="slide3">
+            <div class="carousel-slide">
+                <img src="img/carrusel 3.webp" alt="Imagen 3">
+                <button class="carousel-button">Ver más</button>
+                <label for="slide2" class="prev">&#10094;</label>
+                <label for="slide1" class="next">&#10095;</label>
+            </div>
+    
+            <!-- Indicadores -->
+            <div class="indicators">
+                <label for="slide1" class="dot"></label>
+                <label for="slide2" class="dot"></label>
+                <label for="slide3" class="dot"></label>
+            </div>
+        </div>
+    </section>
+    <section class="products">
+        <!-- Fila 1 -->
+        <div class="product">
+            <video class="product-video" autoplay muted loop>
+                <source src="img/siracusa dress.mp4" type="video/mp4">
+                Tu navegador no soporta el video.
+            </video>
+            <div class="product-icons">
+                <button class="add-to-cart"><i class="fas fa-shopping-bag"></i></button>
+                <button class="add-to-wishlist"><i class="fas fa-heart"></i></button>
+            </div>
+            <div class="product-info">
+                <h3>SIRACUSA DRESS BURGUNDY</h3>
+                <p>S/. 748.00</p>
+            </div>
+        </div>
+    
+        <div class="product">
+            <img src="img/venus.webp" alt="Venus Coat">
+            <div class="product-icons">
+                <button class="add-to-cart"><i class="fas fa-shopping-bag"></i></button>
+                <button class="add-to-wishlist"><i class="fas fa-heart"></i></button>
+            </div>
+            <div class="product-info">
+                <h3>VENUS COAT</h3>
+                <p>S/. 572.00</p>
+            </div>
+        </div>
+    
+        <div class="product">
+            <img src="img/nabuco.webp" alt="Nabuco Dress">
+            <div class="product-icons">
+                <button class="add-to-cart"><i class="fas fa-shopping-bag"></i></button>
+                <button class="add-to-wishlist"><i class="fas fa-heart"></i></button>
+            </div>
+            <div class="product-info">
+                <h3>NABUCO DRESS</h3>
+                <p>S/. 748.00</p>
+            </div>
+        </div>
+    
+        <!-- Fila 2 -->
+        <div class="product">
+            <img src="img/julieta.webp" alt="Julieta Dress">
+            <div class="product-icons">
+                <button class="add-to-cart"><i class="fas fa-shopping-bag"></i></button>
+                <button class="add-to-wishlist"><i class="fas fa-heart"></i></button>
+            </div>
+            <div class="product-info">
+                <h3>JULIETA DRESS</h3>
+                <p>S/. 876.00</p>
+            </div>
+        </div>
+    
+        <div class="product">
+            <video class="product-video" autoplay muted loop>
+                <source src="img/siracusa dress 2.mp4" type="video/mp4">
+                Tu navegador no soporta el video.
+            </video>
+            <div class="product-icons">
+                <button class="add-to-cart"><i class="fas fa-shopping-bag"></i></button>
+                <button class="add-to-wishlist"><i class="fas fa-heart"></i></button>
+            </div>
+            <div class="product-info">
+                <h3>SIRACUSA DRESS BLUE</h3>
+                <p>S/. 748.00</p>
+            </div>
+        </div>
+    
+        <div class="product">
+            <img src="img/daisy.webp" alt="Daisy Dress">
+            <div class="product-icons">
+                <button class="add-to-cart"><i class="fas fa-shopping-bag"></i></button>
+                <button class="add-to-wishlist"><i class="fas fa-heart"></i></button>
+            </div>
+            <div class="product-info">
+                <h3>DAISY DRESS</h3>
+                <p>S/. 748.00</p>
+            </div>
+        </div>
+    </section>
+    <section class="categories-layout">
+        <div class="category-item dresses">
+            <img src="img/dreses.webp" alt="Dresses">
+            <div class="category-overlay">
+                <h2>Dresses</h2>
+            </div>
+        </div>
+        <div class="category-item sets">
+            <img src="img/sets.webp" alt="Sets">
+            <div class="category-overlay">
+                <h2>Sets</h2>
+            </div>
+        </div>
+        <div class="category-item bride">
+            <img src="img/bride.webp" alt="Bride">
+            <div class="category-overlay">
+                <h2>Bride</h2>
+            </div>
+        </div>
+        <div class="category-item shawls">
+            <img src="img/shawls.webp" alt="Shawls">
+            <div class="category-overlay">
+                <h2>Shawls</h2>
+            </div>
+        </div>
+    </section>
+    <section class="features-section">
+        <div class="features-container">
+            <!-- Ultra fast shipping -->
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <i class="fas fa-paper-plane"></i>
+                </div>
+                <h3>Ultra fast shipping</h3>
+                <p>We know you can't wait to meet your crush.</p>
+            </div>
+    
+            <!-- Refund policy -->
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <i class="fas fa-undo-alt"></i>
+                </div>
+                <h3>We will refund you</h3>
+                <p>We will be sad, but we promise we won't make a big deal out of it.</p>
+            </div>
+    
+            <!-- Our shops -->
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <i class="fas fa-store"></i>
+                </div>
+                <h3>Our shops</h3>
+                <p>You were awaiting us more eagerly than your Uber home.</p>
+            </div>
+    
+            <!-- Customer service -->
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <i class="fas fa-headset"></i>
+                </div>
+                <h3>Customer service</h3>
+                <p>By phone or email. The only question our wedding experts will not be able to answer is whether you will catch the bouquet.</p>
+            </div>
+        </div>
+    </section>
+    <section class="image-slider">
+        <div class="slider-container">
+          <button class="slider-btn prev-btn">&#8249;</button>
+          <div class="slider-images">
+            <img src="img/img1.webp" alt="Image 1">
+            <img src="img/img2.webp" alt="Image 2">
+            <img src="img/img3.webp" alt="Image 3">
+            <img src="img/img4.webp" alt="Image 4">
+            <img src="img/img5.webp" alt="Image 5">
+            <img src="img/img7.webp" alt="Image 6">
+            <img src="img/img8.webp" alt="Image 7">
+            <img src="img/img9.webp" alt="Image 8">
+          </div>
+          <button class="slider-btn next-btn">&#8250;</button>
+        </div>
+      </section>
+      
+        
+    <section class="trustpilot-section">
+        <div class="trustpilot-container">
+          <!-- Logo de Trustpilot -->
+          <div class="trustpilot-header">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="32"
+              height="32"
+              viewBox="0 0 24 24"
+              fill="#00B67A"
+              class="trustpilot-logo"
+            >
+              <path d="M12 0l2.837 8.735h9.163l-7.416 5.39 2.838 8.734-7.422-5.394-7.422 5.394 2.838-8.734-7.416-5.39h9.163z" />
+            </svg>
+            <span class="trustpilot-name">Trustpilot</span>
+          </div>
+         
+          <!-- Estrellas -->
+          <div class="trustpilot-stars">
+            <!-- Estrella completa -->
+            <div class="star-box">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="40"
+                height="40"
+                viewBox="0 0 24 24"
+                class="star-icon"
+              >
+                <rect width="24" height="24" fill="#00B67A"></rect>
+                <path
+                  d="M12 .288l2.833 8.718h9.167l-7.417 5.391 2.833 8.719-7.416-5.392-7.417 5.392 2.833-8.719-7.417-5.391h9.167z"
+                  fill="white"
+                />
+              </svg>
+            </div>
+            <div class="star-box">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="40"
+                height="40"
+                viewBox="0 0 24 24"
+                class="star-icon"
+              >
+                <rect width="24" height="24" fill="#00B67A"></rect>
+                <path
+                  d="M12 .288l2.833 8.718h9.167l-7.417 5.391 2.833 8.719-7.416-5.392-7.417 5.392 2.833-8.719-7.417-5.391h9.167z"
+                  fill="white"
+                />
+              </svg>
+            </div>
+            <div class="star-box">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="40"
+                height="40"
+                viewBox="0 0 24 24"
+                class="star-icon"
+              >
+                <rect width="24" height="24" fill="#00B67A"></rect>
+                <path
+                  d="M12 .288l2.833 8.718h9.167l-7.417 5.391 2.833 8.719-7.416-5.392-7.417 5.392 2.833-8.719-7.417-5.391h9.167z"
+                  fill="white"
+                />
+              </svg>
+            </div>
+            <div class="star-box">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="40"
+                height="40"
+                viewBox="0 0 24 24"
+                class="star-icon"
+              >
+                <rect width="24" height="24" fill="#00B67A"></rect>
+                <path
+                  d="M12 .288l2.833 8.718h9.167l-7.417 5.391 2.833 8.719-7.416-5.392-7.417 5.392 2.833-8.719-7.417-5.391h9.167z"
+                  fill="white"
+                />
+              </svg>
+            </div>
+            <!-- Media estrella -->
+            <div class="star-box">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="40"
+                height="40"
+                viewBox="0 0 24 24"
+                class="star-icon"
+              >
+                <rect width="24" height="24" fill="#D9D9D9"></rect>
+                <clipPath id="half-star">
+                  <rect width="12" height="24" x="0" y="0"></rect>
+                </clipPath>
+                <rect width="24" height="24" fill="#00B67A" clip-path="url(#half-star)"></rect>
+                <path
+                  d="M12 .288l2.833 8.718h9.167l-7.417 5.391 2.833 8.719-7.416-5.392-7.417 5.392 2.833-8.719-7.417-5.391h9.167z"
+                  fill="white"
+                />
+              </svg>
+            </div>
+          </div>
+      
+          <!-- TrustScore -->
+          <p class="trustpilot-score">
+            TrustScore <strong>4.4</strong> | 1,114 reviews
+          </p>
+        </div>
+      </section>
+      
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <!-- Sección principal del footer -->
+            <div class="footer-content">
+                <!-- Sección About Us -->
+                <div class="footer-section">
+                    <h4>ABOUT US</h4>
+                    <ul>
+                        <li><a href="#">About us</a></li>
+                        <li><a href="#">Size guide</a></li>
+                        <li><a href="#">FAQs</a></li>
+                    </ul>
+                </div>
+    
+                <!-- Sección Customer Service -->
+                <div class="footer-section">
+                    <h4>CUSTOMER SERVICE</h4>
+                    <ul>
+                        <li><a href="#">Return my order</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Payment methods</a></li>
+                    </ul>
+                </div>
+    
+                <!-- Sección Legal Information -->
+                <div class="footer-section">
+                    <h4>LEGAL INFORMATION</h4>
+                    <ul>
+                        <li><a href="#">Legal warning</a></li>
+                        <li><a href="#">Cookies policy</a></li>
+                        <li><a href="#">Privacy policy</a></li>
+                        <li><a href="#">Payment in 3 installments</a></li>
+                    </ul>
+                </div>
+    
+                <!-- Sección Newsletter -->
+                <div class="footer-section newsletter">
+                    <h4>NEWSLETTER</h4>
+                    <p>Sign up to receive our news and offers. You can unsubscribe at any time.</p>
+                    <form action="#">
+                        <input type="email" placeholder="E-mail">
+                        <button type="submit"><i class="fas fa-arrow-right"></i></button>
+                    </form>
+                </div>
+            </div>
+    
+            <!-- Sección adicional del footer -->
+            <div class="footer-bottom">
+                <!-- Redes sociales -->
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-tiktok"></i></a>
+                </div>
+                
+                <!-- Copyright -->
+                <p>© 2024, Lady Pipa</p>
+    
+                <!-- Métodos de pago -->
+                <div class="payment-methods">
+                    <img src="img/visa.png" alt="Visa">
+                    <img src="img/mastercard.png" alt="MasterCard">
+                    <img src="img/amex.png" alt="American Express">
+                    <img src="img/paypal.png" alt="PayPal">
+                    <img src="img/shop.png" alt="Shop Pay">
+                    <img src="img/unionpay.png" alt="UnionPay">
+                    <img src="img/klarna.png" alt="Klarna">
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="js/script.js"></script>
+  
+</body>
+</html>

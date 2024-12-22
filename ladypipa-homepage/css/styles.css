@@ -1,0 +1,752 @@
+/* Barra superior */
+.top-bar {
+    background-color: #333; /* Fondo oscuro */
+    color: white; /* Color del texto */
+    text-align: center; /* Centrado */
+    font-size: 0.7em; /* Tamaño más pequeño del texto */
+    font-family: 'Inter', sans-serif; /* Fuente Inter */
+    letter-spacing: 0.3px; /* Espaciado entre letras */
+    padding: 0; /* Espaciado interno */
+    margin: -1px; /* Sin márgenes adicionales */
+    position: fixed; /* Fijo en la parte superior */
+    top: 0;
+    width: 100%;
+}
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    margin-top: 52px; /* Altura combinada de la barra superior y el navbar */
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background: white;
+    border-bottom: 1px solid #ddd;
+    position: fixed; /* Fijo justo debajo de la barra superior */
+    top: 35px; /* Espacio debajo de la barra superior */
+    width: 100%;
+    z-index: 999; /* Justo debajo de la barra superior */
+}
+
+/* Logo */
+.logo {
+    font-size: 1.8em;
+    font-weight: bold;
+    text-transform: lowercase;
+    font-family: 'Inter', sans-serif;
+}
+.logo-text {
+    font-family: 'Cormorant Garamond', serif; /* Cambia según la fuente elegida */
+    font-size: 36px; /* Ajusta el tamaño para que sea más grande */
+    font-weight: 400;
+    text-transform: lowercase;
+    letter-spacing: 0.05em;
+    color: #000; /* Color negro, cambia si es necesario */
+    text-decoration: none; /* Elimina el subrayado del enlace */
+    display: inline-block; /* Asegura que no se comporte como un enlace por defecto */
+    cursor: default; /* Cambia el cursor a normal en lugar de "pointer" */
+}
+/* Menú principal */
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    margin: 0;
+    padding: 0;
+}
+
+.menu li {
+    position: relative;
+}
+
+.menu li a {
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+    padding: 10px;
+    display: block;
+    text-transform: uppercase;
+    font-size: 0.95em;
+    font-family: 'Arial', sans-serif;
+}
+
+.menu li a.highlight {
+    color: red;
+}
+
+.menu li a i {
+    margin-left: 5px; /* Espaciado entre texto y flecha */
+    font-size: 0.8em; /* Tamaño más pequeño */
+}
+
+/* Submenú */
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 200px;
+    list-style: none;
+    padding: 10px 0;
+    margin: 0;
+    background: white;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: none;
+    z-index: 100;
+}
+
+.dropdown-menu li a {
+    padding: 10px 15px;
+    display: block;
+    color: black;
+    text-decoration: none;
+    font-size: 0.9em;
+    font-family: 'Arial', sans-serif;
+    white-space: nowrap;
+}
+
+.dropdown-menu li a:hover {
+    background: #f4f4f4;
+}
+
+/* Mostrar el submenú al pasar el mouse */
+.menu li:hover .dropdown-menu {
+    display: block;
+}
+
+/* Íconos */
+.icons {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.icons a {
+    color: black;
+    text-decoration: none;
+    font-size: 1.2em;
+    display: flex;
+    align-items: center;
+}
+
+.icons a i {
+    margin-left: 5px;
+    font-size: 0.85em; /* Flechas más pequeñas */
+}
+
+.icons a:hover {
+    color: #777;
+}
+
+/* Ajustes responsivos */
+@media (max-width: 768px) {
+    .menu {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .icons {
+        display: none;
+    }
+}
+/* Contenedor del carrusel */
+.carousel-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.carousel-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+.carousel-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Botón "Ver más" */
+.carousel-button {
+    position: absolute;
+    top: 50%; /* Posición vertical centrada */
+    left: 50%; /* Posición horizontal centrada */
+    transform: translate(-50%, -50%); /* Ajusta el botón al centro exacto */
+    background-color: white;
+    color: black;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 1em; /* Aumenta el tamaño de la letra */
+    padding: 15px 30px; /* Botón más grande */
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
+    z-index: 10;
+}
+
+.carousel-button:hover {
+    background-color: black;
+    color: white;
+    transform: translate(-50%, -50%) scale(1.05); /* Animación de agrandamiento */
+}
+
+
+/* Mostrar la slide activa */
+input[type="radio"]:checked + .carousel-slide {
+    display: block;
+}
+/* Contenedor de productos */
+.products {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Estilos de cada producto */
+.product {
+    flex: 1 1 calc(33.333% - 20px); /* Tres productos por fila con espacio entre ellos */
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Imagen o video del producto */
+.product img,
+.product-video {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Información del producto */
+.product-info {
+    padding: 15px 10px;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9em;
+    color: #333;
+    text-align: left; /* Alineación a la izquierda */
+}
+
+.product-info h3 {
+    margin: 10px 0;
+    font-size: 1.2em;
+    font-weight: 400;
+}
+
+.product-info p {
+    font-size: 1em;
+    color: #000;
+    font-weight: bold;
+    margin-bottom: 0;
+}
+
+/* Íconos del producto */
+.product-icons {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.product-icons button {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.product-icons button:hover {
+    background-color: #000;
+    color: #fff;
+    transform: scale(1.1);
+}
+
+.product-icons button i {
+    font-size: 1em;
+}
+
+/* Ajustes responsivos */
+@media (max-width: 768px) {
+    .product {
+        flex: 1 1 calc(50% - 20px); /* Dos productos por fila en pantallas medianas */
+    }
+}
+
+@media (max-width: 480px) {
+    .product {
+        flex: 1 1 100%; /* Un producto por fila en pantallas pequeñas */
+    }
+}
+
+/* Contenedor principal */
+.categories-layout {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr); /* Dividir en 12 columnas */
+    grid-template-rows: repeat(6, auto); /* 6 filas para mayor control */
+    gap: 10px;
+    padding: 20px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Estilo base para los elementos */
+.category-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.category-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.category-item:hover img {
+    transform: scale(1.1);
+}
+
+/* Texto superpuesto */
+.category-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.category-item:hover .category-overlay {
+    opacity: 1;
+}
+
+.category-overlay h2 {
+    color: white;
+    font-family: 'Inter', sans-serif;
+    font-size: 1.8rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* Configuración específica para cada área */
+.dresses {
+    grid-column: span 4; /* Ocupa 4 columnas */
+    grid-row: span 3; /* Ocupa 3 filas */
+}
+
+.sets {
+    grid-column: span 4; /* Ocupa 4 columnas */
+    grid-row: span 3; /* Ocupa 3 filas */
+}
+
+.shawls {
+    grid-column: span 4; /* Ocupa 4 columnas */
+    grid-row: span 6; /* Ocupa todas las filas */
+}
+
+.bride {
+    grid-column: span 8; /* Ocupa 8 columnas */
+    grid-row: span 3; /* Ocupa 3 filas */
+}
+
+/* Ajustes responsivos */
+@media (max-width: 768px) {
+    .categories-layout {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+
+    .category-item {
+        grid-column: auto;
+        grid-row: auto;
+    }
+
+    .category-item img {
+        height: 250px;
+    }
+}
+
+/* Botones de navegación */
+label.prev,
+label.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.7);
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    font-size: 18px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+label.prev {
+    left: 20px;
+}
+
+label.next {
+    right: 20px;
+}
+
+/* Indicadores */
+.indicators {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+}
+
+.indicators .dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.7);
+    cursor: pointer;
+}
+
+input[type="radio"]:checked + .carousel-slide ~ .indicators label[for="slide1"] {
+    background-color: red;
+}
+
+input[type="radio"]:checked + .carousel-slide ~ .indicators label[for="slide2"] {
+    background-color: red;
+}
+
+input[type="radio"]:checked + .carousel-slide ~ .indicators label[for="slide3"] {
+    background-color: red;
+}
+/* Features Section */
+.features-section {
+    background-color: white;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.features-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.feature-item {
+    flex: 1;
+    max-width: 250px;
+    margin: 20px;
+    text-align: center;
+}
+
+.feature-icon {
+    background-color: #f5f5f5;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 20px;
+    font-size: 30px;
+    color: #333;
+}
+
+.feature-item h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.feature-item p {
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    color: #555;
+}
+
+
+/* Ajustes Responsivos */
+@media (max-width: 768px) {
+    .features {
+        flex-wrap: wrap;
+        gap: 30px;
+        justify-content: center;
+    }
+
+    .feature {
+        max-width: 100%;
+    }
+}
+/* Slider Section */
+/* Contenedor principal */
+/* Contenedor principal */
+.image-slider {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: #fff;
+    overflow: hidden;
+  }
+  
+  /* Contenedor del slider */
+  .slider-container {
+    position: relative;
+    width: 90%;
+    max-width: 1200px;
+    overflow: hidden;
+    border-radius: 10px;
+  }
+  
+  /* Imágenes del slider */
+  .slider-images {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .slider-images img {
+    width: 200px; /* Ancho de cada imagen */
+    margin: 10px;
+    border-radius: 15px;
+    object-fit: cover;
+  }
+  
+  /* Botones de navegación */
+  .slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 1000;
+    border-radius: 50%;
+  }
+  
+  .prev-btn {
+    left: 10px;
+  }
+  
+  .next-btn {
+    right: 10px;
+  }
+  
+  .slider-btn:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  
+/* Footer General */
+.footer {
+    background-color: #ffffff;
+    padding: 40px 20px;
+    font-family: 'Inter', sans-serif;
+    color: #333;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Sección Principal del Footer */
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.footer-section h4 {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 8px;
+}
+
+.footer-section ul li a {
+    color: #333;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.footer-section ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Newsletter */
+.newsletter form {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.newsletter input[type="email"] {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    flex: 1;
+    font-size: 0.9rem;
+}
+
+.newsletter button {
+    background-color: #000;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    margin-left: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.newsletter button i {
+    font-size: 0.9rem;
+}
+
+.newsletter button:hover {
+    background-color: #444;
+}
+/* Trustpilot Section */
+.trustpilot-section {
+  text-align: center;
+  padding: 20px 0;
+  background-color: white;
+}
+
+.trustpilot-container {
+  display: inline-block;
+  text-align: center;
+}
+
+.trustpilot-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.trustpilot-logo {
+  width: 32px;
+  height: 32px;
+}
+
+.trustpilot-name {
+  font-family: 'Inter', sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+}
+
+.trustpilot-stars {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  margin-bottom: 15px;
+}
+
+.star-box {
+  background-color: transparent;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.trustpilot-score {
+  font-family: 'Inter', sans-serif;
+  font-size: 18px;
+  color: #555;
+}
+
+.trustpilot-score strong {
+  font-weight: bold;
+  color: #333;
+}
+
+/* Sección Inferior del Footer */
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #ddd;
+    padding-top: 20px;
+    font-size: 0.85rem;
+}
+
+.social-links a {
+    color: #333;
+    font-size: 1.2rem;
+    margin-right: 15px;
+    text-decoration: none;
+}
+
+.social-links a:hover {
+    color: #000;
+}
+
+.payment-methods img {
+    width: 40px;
+    margin-left: 10px;
+}
